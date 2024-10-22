@@ -27,7 +27,7 @@
     };
 
     keymap {
-        compatible = "zmk,keymap";dd
+        compatible = "zmk,keymap";
 
         default_layer {
       display-name = "Qwerty";
