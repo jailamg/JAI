@@ -45,7 +45,7 @@
                  &kp LGUI &kp LALT &kp LCTRL &kp RET  &mo LOWER     &mo RAISE &kp SPACE  &kp RCTRL &kp RALT  &kp RGUI
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_DN PG_UP &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
         lower_layer {
