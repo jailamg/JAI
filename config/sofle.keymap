@@ -19,7 +19,7 @@
 #define ZMK_MOUSE_SCRL_VAL 140
 
 
-scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+&scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
 	compatible = "zmk,behavior-sensor-rotate";
   tap-ms = <20>;
 	#sensor-binding-cells = <0>;
