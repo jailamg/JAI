@@ -16,8 +16,6 @@
 #define RAISE 2
 #define ADJUST 3
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 3000
-
-#define ZMK_MOUSE_SCRL_VAL 140
 #include "mouse.dtsi"
 
 
