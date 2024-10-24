@@ -17,7 +17,9 @@
 #define ADJUST 3
 #define U_MOUSE_MOVE_MAX 1400
 
-&mmv { time-to-max-speed-ms = <400>; };
+&mmv { 
+    time-to-max-speed-ms = <400>; 
+};
 
 &soft_off {
     hold-time-ms = <1000>; // Only turn off it the key is held for 5 seconds or longer.
