@@ -18,9 +18,9 @@
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 3000
 
 &mmv {
-  acceleration-exponent = <1>;      // 1
-  time-to-max-speed-ms = <1000>;     // 40
-  delay-ms = <0>;                   // 0
+    acceleration-exponent = <1>;      // 1
+    time-to-max-speed-ms = <1000>;     // 40
+    delay-ms = <0>;                   // 0
 };
 
 &soft_off {
@@ -60,7 +60,10 @@
                     &kp LGUI  &kp LALT  &kp LCTRL  &kp RET  &mo 1              &mo 2       &kp SPACE  &kp RIGHT_GUI  &kp RALT   &kp RCTRL
             >;
 
-            sensor-bindings = <&msc SCRL_UP &msc SCRL_DOWN &inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings =
+                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>,
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         lower_layer {
