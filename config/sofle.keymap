@@ -15,9 +15,13 @@
 #define LOWER 1
 #define RAISE 2
 #define ADJUST 3
-#define U_MOUSE_MOVE_MAX 4000
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 3000
 
-&mmv { time-to-max-speed-ms = <300>; };
+&mmv {
+  acceleration-exponent = <1>;      // 1
+  time-to-max-speed-ms = <500>;     // 40
+  delay-ms = <0>;                   // 0
+};
 
 &soft_off {
     hold-time-ms = <1000>; // Only turn off it the key is held for 5 seconds or longer.
