@@ -18,14 +18,7 @@
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 3000
 
 #define ZMK_MOUSE_SCRL_VAL 140
-
-
-scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-	compatible = "zmk,behavior-sensor-rotate";
-  tap-ms = <20>;
-	#sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-};
+#include "mouse.dtsi"
 
 
 &mmv {
@@ -71,7 +64,7 @@ scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
                     &kp LGUI  &kp LALT  &kp LCTRL  &kp RET  &mo 1              &mo 2       &kp SPACE  &kp RIGHT_GUI  &kp RALT   &kp RCTRL
             >;
 
-            sensor-bindings = <&scroll_up_down &inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_msc SCRL_UP SCRL_DOWN &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         lower_layer {
@@ -93,7 +86,7 @@ scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
                       &trans     &trans       &trans    &trans     &trans       &trans  &trans     &trans    &trans           &trans
             >;
 
-            sensor-bindings = <&scroll_up_down &inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_msc SCRL_UP SCRL_DOWN &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         raise_layer {
