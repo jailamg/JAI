@@ -15,6 +15,11 @@
 #define LOWER 1
 #define RAISE 2
 #define ADJUST 3
+#define U_MOUSE_MOVE_MAX 1400
+
+&mmv {
+	time-to-max-speed-ms = <400>;
+};
 
 &soft_off {
     hold-time-ms = <1000>; // Only turn off it the key is held for 5 seconds or longer.
@@ -120,8 +125,8 @@
         mouseKey {
             bindings = <
 &none   &none  &none  &none  &none  &none                  &none  &none     &none     &none     &none  &none
-&none   &none  &none  &none  &none  &none                  &none  &none     &none     &none     &none  &none
-&tog 4  &none  &none  &none  &none  &none                  &none  &mkp MB1  &mkp MB3  &mkp MB2  &none  &none
+&none   &none  &none  &mmv MOVE_UP  &none  &none                  &none  &none     &none     &none     &none  &none
+&tog 4  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &none                  &none  &mkp MB1  &mkp MB3  &mkp MB2  &none  &none
 &none   &none  &none  &none  &none  &none  &none    &none  &none  &mkp MB4  &none     &mkp MB5  &none  &none
                &none  &none  &none  &none  &none    &none  &none  &none     &none     &none
             >;
