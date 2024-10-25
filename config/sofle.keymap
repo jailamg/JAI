@@ -150,11 +150,11 @@
 
         System {
             bindings = <
-&none  &none  &kp C_BRI_UP  &kp C_BRI_DN  &kp LC(UP_ARROW)  &kp LG(SPACE)                  &none  &none  &none  &none  &none  &kp LC(LG(Q))
-&none  &none  &none         &none         &none             &none                          &none  &none  &none  &none  &none  &none
-&none  &none  &none         &none         &none             &none                          &none  &none  &none  &none  &none  &none
-&none  &none  &none         &none         &none             &none          &none    &none  &none  &none  &none  &none  &none  &none
-              &none         &none         &none             &none          &none    &none  &none  &none  &none  &none
+&kp K_LOCK  &kp K_SCREENSAVER  &kp C_BRI_UP  &kp C_BRI_DN  &kp LC(UP_ARROW)  &kp LG(SPACE)                  &none  &none  &none  &none  &none  &none
+&none       &none              &none         &none         &none             &none                          &none  &none  &none  &none  &none  &none
+&none       &none              &none         &none         &none             &none                          &none  &none  &none  &none  &none  &none
+&none       &none              &none         &none         &none             &none          &none    &none  &none  &none  &none  &none  &none  &none
+                               &none         &none         &none             &none          &none    &none  &none  &none  &none  &none
             >;
 
             label = "Mac";
