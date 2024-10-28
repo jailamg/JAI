@@ -14,7 +14,7 @@ configuration. The layout consists of 60-keys and is mainly used on my sofle V2.
 ### 5. Board settings adjustment
 ![](draw/set.png)
 ### 6. [Yabai](https://github.com/koekeishiya/yabai) navigator and mac related shortcuts
-![](draw/yabai.png)
+![](draw/yabaimac.png)
 ### 7. Complete mouse control
 ![](draw/mouse.png)
 ### 8. MacOS 
