@@ -36,8 +36,8 @@
         compatible = "zmk,conditional-layers";
 
         adjust_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
+            if-layers = <2 3>;
+            then-layer = <4>;
         };
     };
 
@@ -55,14 +55,29 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESC    &kp N1   &kp N2    &kp N3    &kp N4     &kp N5                                     &kp N6     &kp N7  &kp N8     &kp N9     &kp N0    &kp C_PLAY_PAUSE
-&kp TAB    &kp Q    &kp W     &kp E     &kp R      &kp T                                      &kp Y      &kp U   &kp I      &kp O      &kp P     &kp SINGLE_QUOTE
-&mo 4      &kp A    &kp S     &kp D     &kp F      &kp G                                      &kp H      &kp J   &kp K      &kp L      &kp SEMI  &to 6
-&kp LSHFT  &lt 5 Z  &kp X     &kp C     &kp V      &kp B    &rgb_ug RGB_TOG    &kp C_MUTE     &kp N      &kp M   &kp COMMA  &kp DOT    &kp FSLH  &kp RIGHT_SHIFT
-                    &kp LGUI  &kp LALT  &kp LCTRL  &kp RET  &mo 1              &kp BACKSPACE  &kp SPACE  &mo 2   &kp RALT   &kp RCTRL
+&kp ESC    &kp N1   &kp N2    &kp N3    &kp N4     &kp N5                                                           &kp N6     &kp N7  &kp N8     &kp N9     &kp N0    &kp C_PLAY_PAUSE
+&kp TAB    &kp Q    &kp W     &kp E     &kp R      &kp T                                                            &kp Y      &kp U   &kp I      &kp O      &kp P     &kp SINGLE_QUOTE
+&mo 5      &kp A    &kp S     &kp D     &kp F      &kp G                                                            &kp H      &kp J   &kp K      &kp L      &kp SEMI  &to 1
+&kp LSHFT  &lt 6 Z  &kp X     &kp C     &kp V      &kp B            &rgb_ug RGB_TOG    &kp C_MUTE                   &kp N      &kp M   &kp COMMA  &kp DOT    &kp FSLH  &kp RIGHT_SHIFT
+                    &kp LGUI  &kp LALT  &kp LCTRL  &mt LS(RET) RET  &mo 2              &mt LC(BACKSPACE) BACKSPACE  &kp SPACE  &mo 3   &kp RALT   &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_msc SCRL_UP SCRL_DOWN &inc_dec_kp C_VOL_DN C_VOL_UP>;
+        };
+
+        MacOS {
+            display-name = "Qwerty Mac";
+            bindings = <
+&kp ESC    &kp N1   &kp N2     &kp N3    &kp N4         &kp N5                                                              &kp N6     &kp N7  &kp N8     &kp N9     &kp N0    &kp C_PLAY_PAUSE
+&kp TAB    &kp Q    &kp W      &kp E     &kp R          &kp T                                                               &kp Y      &kp U   &kp I      &kp O      &kp P     &kp SINGLE_QUOTE
+&mo 5      &kp A    &kp S      &kp D     &kp F          &kp G                                                               &kp H      &kp J   &kp K      &kp L      &kp SEMI  &to 0
+&kp LSHFT  &lt 6 Z  &kp X      &kp C     &kp V          &kp B               &rgb_ug RGB_TOG    &kp C_MUTE                   &kp N      &kp M   &kp COMMA  &kp DOT    &kp FSLH  &kp RIGHT_SHIFT
+                    &kp LCTRL  &kp LALT  &kp RIGHT_GUI  &mt LS(RET) RETURN  &mo 2              &mt LG(BACKSPACE) BACKSPACE  &kp SPACE  &mo 3   &kp RALT   &kp RCTRL
+            >;
+
+            sensor-bindings =
+                <&inc_dec_msc SCRL_UP SCRL_DOWN>,
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         lower_layer {
@@ -146,21 +161,6 @@
             sensor-bindings =
                 <&inc_dec_kp PAGE_UP PAGE_DOWN>,
                 <&inc_dec_kp PAGE_UP PAGE_DOWN>;
-        };
-
-        MacOS {
-            display-name = "Qwerty Mac";
-            bindings = <
-&kp ESC    &kp N1   &kp N2     &kp N3    &kp N4         &kp N5                                     &kp N6     &kp N7  &kp N8     &kp N9     &kp N0    &kp C_PLAY_PAUSE
-&kp TAB    &kp Q    &kp W      &kp E     &kp R          &kp T                                      &kp Y      &kp U   &kp I      &kp O      &kp P     &kp SINGLE_QUOTE
-&mo 4      &kp A    &kp S      &kp D     &kp F          &kp G                                      &kp H      &kp J   &kp K      &kp L      &kp SEMI  &to 0
-&kp LSHFT  &lt 5 Z  &kp X      &kp C     &kp V          &kp B    &rgb_ug RGB_TOG    &kp C_MUTE     &kp N      &kp M   &kp COMMA  &kp DOT    &kp FSLH  &kp RIGHT_SHIFT
-                    &kp LCTRL  &kp LALT  &kp RIGHT_GUI  &kp RET  &mo 1              &kp BACKSPACE  &kp SPACE  &mo 2   &kp RALT   &kp RCTRL
-            >;
-
-            sensor-bindings =
-                <&inc_dec_msc SCRL_UP SCRL_DOWN>,
-                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
     };
 };
