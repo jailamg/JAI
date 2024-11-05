@@ -30,6 +30,24 @@
 };
 
 / {
+    macros {
+        launch_sndvol: launch_sndvol {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+                &kp LGUI
+                &kp R
+                &delay 100
+                &text "sndvol.exe"
+                &delay 100
+                &kp ENTER
+            >;
+        };
+    };
+};
+
+
+/ {
     // Activate ADJUST layer by pressing raise and lower
 
     conditional_layers {
@@ -128,7 +146,7 @@
             //              |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                       &trans     &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans   &macro_press_release &kp LGUI &kp R &delay 100 &text "sndvol.exe" &delay 100 &kp ENTER
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                       &trans     &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans   &launch_sndvol
 &trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                             &kp PG_UP  &trans          &kp UP            &trans      &kp N0   &kp PRINTSCREEN
 &trans      &kp LALT      &kp LCTRL     &kp LSHFT     &trans        &kp CLCK                           &kp PG_DN  &kp LEFT        &kp DOWN          &kp RIGHT   &kp DEL  &kp BSPC
 &trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &soft_off  &trans     &trans          &trans            &trans      &trans   &trans
