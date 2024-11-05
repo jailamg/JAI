@@ -34,18 +34,11 @@
         launch_sndvol: launch_sndvol {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
-                &kp LGUI
-                &kp R
-                &delay 100
-                &text "sndvol.exe"
-                &delay 100
-                &kp ENTER
-            >;
+            bindings = <&kp LG(R) &kp S &kp N &kp D &kp V &kp O &kp L &kp DOT &kp E &kp X &kp E &kp ENTER>;
+            wait-ms = <50>;
         };
     };
 };
-
 
 / {
     // Activate ADJUST layer by pressing raise and lower
