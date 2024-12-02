@@ -19,10 +19,12 @@ configuration. The layout consists of 60-keys and is mainly used on my sofle V2.
 ![](draw/mouse.png)
 ### 8. MacOS 
 ![](draw/mac.png)
+### 9. Numpad
 
 ## Minor Features
 1. Rotary encoder support (left and right)
-2. Oled screen support
+2. Oled screen with custom widgets support
+3. Power saving.
 
 ## Usage
 
