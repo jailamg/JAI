@@ -72,7 +72,7 @@
                     &kp LGUI  &kp LALT  &kp LCTRL  &mt LS(RET) RET  &mo 4              &mt LC(BACKSPACE) BACKSPACE  &kp SPACE  &mo 5   &kp RALT   &kp RCTRL
             >;
 
-            sensor-bindings = <&inc_dec_msc SCRL_UP SCRL_DOWN &inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_msc PAGE_UP PAGE_DOWN &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         MacOS {
@@ -199,7 +199,7 @@
 
             display-name = "Rat";
             sensor-bindings =
-                <&inc_dec_kp PAGE_UP PAGE_DOWN>,
+                <&inc_dec_kp SCRL_UP SCRL_DOWN>,
                 <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
