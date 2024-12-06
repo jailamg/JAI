@@ -178,7 +178,7 @@
 
         yabai {
             bindings = <
-&kp K_LOCK  &kp K_SCREENSAVER  &kp C_BRI_UP                &kp C_BRI_DN                &kp LC(UP_ARROW)             &kp LG(SPACE)                          &none  &none              &none              &none              &none  &none
+&kp K_LOCK  &kp K_SCREENSAVER  &kp C_BRI_DN                &kp C_BRI_UP                &kp LC(UP_ARROW)             &kp LG(SPACE)                          &none  &none              &none              &none              &none  &none
 &none       &none              &none                       &kp LA(LC(LG(UP_ARROW)))    &none                        &none                                  &none  &none              &kp LC(LG(LA(I)))  &none              &none  &none
 &none       &none              &kp LA(LC(LG(LEFT_ARROW)))  &kp LC(LG(LA(DOWN_ARROW)))  &kp LA(LC(LG(RIGHT_ARROW)))  &none                                  &none  &kp LG(LA(LC(J)))  &kp LA(LG(LC(K)))  &kp LA(LC(LG(L)))  &none  &none
 &none       &none              &kp LA(LC(LG(N)))           &none                       &kp LC(LA(LG(M)))            &none                  &none    &none  &none  &kp LC(LA(LG(N)))  &none              &kp LC(LA(LG(M)))  &none  &none
