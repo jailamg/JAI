@@ -112,13 +112,4 @@
             label = "ADJ";
         };
     };
-
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        adj {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
 };
