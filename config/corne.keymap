@@ -40,6 +40,11 @@
         compatible = "zmk,conditional-layers";
 
         adjust_layer {
+            if-layers = <3 2>;
+            then-layer = <4>;
+        };
+
+        adj2 {
             if-layers = <2 3>;
             then-layer = <4>;
         };
