@@ -15,6 +15,22 @@
     chain-length = <27>;
 };
 
+&soft_off {
+    hold-time-ms = <500>; // Only turn off it the key is held for 5 seconds or longer.
+};
+
+
+/ {
+    macros {
+        launch_sndvol: launch_sndvol {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(R) &kp S &kp N &kp D &kp V &kp O &kp L &kp DOT &kp E &kp X &kp E &kp ENTER>;
+            wait-ms = <20>;
+        };
+    };
+};
+
 
 / {
     // Activate ADJUST layer by pressing raise and lower
@@ -29,7 +45,7 @@
     };
 
 
-/ {
+ {
     keymap {
         compatible = "zmk,keymap";
 
